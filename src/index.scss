@@ -87,12 +87,20 @@ footer{
    .footer{
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin: 0 auto;
    width: 85%;
    padding-top: 3.2rem 3.2rem 0 3.2rem;
+
+   &>*:not(p){
+   
+      width: clamp(95px,14vw,188px);
+      display: block;
+      object-fit: contain;
+   }
    p{
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: clamp(12px,2.5vw,1.6rem);
       line-height: 1.8rem;
       color: #667085;
    }
