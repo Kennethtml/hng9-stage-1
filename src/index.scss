@@ -26,6 +26,9 @@ body{
    align-items: center;
    gap:24px;
    margin-bottom: 56px;
+   .slack{
+      display: none;
+   }
 }
 
 .profile-image{

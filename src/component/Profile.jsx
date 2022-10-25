@@ -4,8 +4,9 @@ import ProfileImg from '../assets/profile.jpg'
 function Profile() {
   return (
     <section className='profile'>
-        <img className='profile-image' src={ProfileImg} alt="profile" />
-        <p className="profile-name">Ehiomhen Kenneth</p>
+        <img className='profile-image'id='profile__img' src={ProfileImg} alt="profile" />
+        <p className="profile-name" id='twitter'>ken</p>
+        <p className="slack" id='slack'>Ehiomhen Kenneth</p>
 
     </section>
   )
