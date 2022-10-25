@@ -8,59 +8,59 @@
   padding: 0;
 }
 html{
-  font-size: calc(100vw/1440px *10px);
+  font-size: 10px;
 }
 body{
    font-family: 'Inter', sans-serif
 }
 .container{
-  max-width: 1440px;
+  max-width: 144rem;
 //   border: 1px solid #000;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 2rem;
 
 }
 .profile {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap:24px;
-   margin-bottom: 56px;
+   gap:2.4rem;
+   margin-bottom: 5.6rem;
    .slack{
       display: none;
    }
 }
 
 .profile-image{
-   width:88px;
-   height:88px;
+   width:8.8rem;
+   height:8.8rem;
    border-radius: 50%;
    object-fit: cover;
 }
 .profile p{
-   font-size: 20px;
+   font-size: 2rem;
    font-weight: 700;
-   line-height: 30px;
+   line-height: 3rem;
 }
 .lists{
   width: 90%;
-  max-width: 1160px;
+  max-width: 116rem;
 //   border: 1px solid red;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:24px ;
+  gap:2.4rem ;
 }
 .lists>*{
-   padding:18px;
+   padding:1.8rem;
    width: 100%;
    text-align: center;
    background: var(--link-color);
    text-decoration: none;
-   font-size: 18px;
+   font-size: 1.8rem;
    font-weight: 600;
-   line-height: 28px;
+   line-height: 2.8rem;
    font-family: Inter;
    color: #000;
    border-radius: 5px;
@@ -72,28 +72,28 @@ body{
 .social-links{
    display: flex;
    justify-content: center;
-   padding: 24px;
-   margin-top: 24px;
-   gap: 24px;
+   padding: 2.4rem;
+   margin-top: 2.4rem;
+   gap: 2.4rem;
 }
 .social-links img{
-   width: 24px;
-   height:24px;
+   width: 2.4rem;
+   height:2.4rem;
    
 }
 footer{
-   padding: 48px 0;
-   margin-top: 52px;
+   padding: 4.8rem 0;
+   margin-top: 5.2rem;
    .footer{
    display: flex;
    justify-content: space-between;
    margin: 0 auto;
    width: 85%;
-   padding-top: 32px 32px 0 32px;
+   padding-top: 3.2rem 3.2rem 0 3.2rem;
    p{
       font-weight: 400;
-      font-size: 16px;
-      line-height: 18px;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
       color: #667085;
    }
    
