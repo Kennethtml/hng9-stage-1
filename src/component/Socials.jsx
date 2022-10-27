@@ -4,10 +4,10 @@ import github from '../assets/github.svg'
 
 function Socials() {
   return (
-    <div className='social-links'>
+    <section className='social-links'>
       <img src={Slack} alt="" />
       <img src={github} alt="" />
-    </div>
+    </section>
   );
 }
 

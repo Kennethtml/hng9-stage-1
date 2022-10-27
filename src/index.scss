@@ -13,11 +13,16 @@ html{
 body{
    font-family: 'Inter', sans-serif
 }
+.wrapper{
+   position: relative;
+ 
+}
 .container{
   max-width: 144rem;
 //   border: 1px solid #000;
   margin: 0 auto;
   margin-top: 2rem;
+    padding: 30px 0;
 
 }
 .profile {
@@ -59,7 +64,7 @@ body{
    background: var(--link-color);
    text-decoration: none;
    font-size: 1.8rem;
-   font-weight: 600;
+   font-weight: 500;
    line-height: 2.8rem;
    font-family: Inter;
    color: #000;
@@ -106,4 +111,30 @@ footer{
    }
    
 }
+}
+
+.btn-share{
+   border:0;
+   background: none;
+   position:absolute;
+   top:0;
+   right: 20%;
+
+    @media(max-width: 600px){
+        right: 5%;
+      }
+
+   .mobile{
+      display: none;
+      @media(max-width: 600px){
+         display: block;
+      }
+   }
+   .desktop{
+      display: block;
+       @media(max-width: 600px){
+         display: none;
+      }
+   }
+
 }
