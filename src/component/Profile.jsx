@@ -6,7 +6,7 @@ function Profile() {
     <section className='profile'>
         <img className='profile-image'id='profile__img' src={ProfileImg} alt="profile" />
         <p className="profile-name" id='twitter'>ken</p>
-        <p className="slack" id='slack'>Ehiomhen Kenneth</p>
+        <p className="slack" id='slack'>Kennethtml</p>
 
     </section>
   )
