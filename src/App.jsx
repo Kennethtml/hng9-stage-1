@@ -14,8 +14,8 @@ function App() {
     <div className="container">
       <main className="wrapper">
         <button className="btn-share">
-          <img src={share} className='share desktop' alt="" />
-          <img src={shareMobile} className='share mobile' alt="" />
+          <img src={share} className='share desktop' alt="share " />
+          <img src={shareMobile} className='share mobile' alt="share" />
         </button>
         <Profile />
         <Links />
