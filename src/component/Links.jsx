@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Links() {
   return (
@@ -11,6 +12,7 @@ function Links() {
       </a>
       <a href="https://background.zuri.team" id='pitch'>Background Check for Coders</a>
       <a href="https://books.zuri.team/design-rules " id='book__design'> Design Books</a>
+      <Link to={'/contact'} id='contact'> Contact Me</Link>
     </section>
   );
 }

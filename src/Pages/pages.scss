@@ -4,6 +4,11 @@
     // border: 1px solid #000;
     width: 92%;
 max-width: 720px;
+
+@media(max-width:600px){
+    padding-block:14px 2px;
+
+}
 h1{
     font-size: 3.6rem;
     font-weight: 600;
