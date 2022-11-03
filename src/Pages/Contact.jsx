@@ -1,9 +1,15 @@
 import React from 'react'
+import { useEffect } from 'react';
 import './pages.scss'
 
 function Contact() {
 
     const name='Ehiomhen Kenneth'
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+
   return (
     <main className="contact">
       <h1>Contact Me</h1>
@@ -35,7 +41,7 @@ function Contact() {
           <input
             type="email"
             id="email"
-            placeholder="Send me a message and I'll reply you as soon as possible..."
+            placeholder="yourname@email.com"
             required
           />
         </div>
@@ -57,7 +63,10 @@ function Contact() {
           </label>
         </div>
 
-        <button className="btn"id='btn__submit'> Send message</button>
+        <button className="btn" id="btn__submit">
+          {" "}
+          Send message
+        </button>
       </form>
     </main>
   );

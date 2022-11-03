@@ -8,7 +8,7 @@ function Footer() {
     <footer>
         <div className="footer">
             <img src={zuri} alt="zuri logo" />
-            <p >HNG 9 frontend task</p>
+            <p >HNG Internship 9 Frontend Task</p>
             <img src={ingressive} alt="ingressive logo" />
             
 
