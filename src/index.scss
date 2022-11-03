@@ -15,6 +15,7 @@ body{
 }
 .wrapper{
    position: relative;
+   border-bottom: 2px solid var(--link-color);
  
 }
 .container{
@@ -95,7 +96,21 @@ footer{
    align-items: center;
    margin: 0 auto;
    width: 85%;
+
    padding-top: 3.2rem 3.2rem 0 3.2rem;
+   position: relative;
+   border: 1px solid #000;
+
+   &::before{
+      content: '';
+      width: 100%;
+      display: block;
+      position: absolute;
+      height: 2px;
+      background: #000;
+      top: 0;
+   }
+
 
    &>*:not(p){
    

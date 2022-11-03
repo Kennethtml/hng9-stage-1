@@ -5,8 +5,8 @@ import github from '../assets/github.svg'
 function Socials() {
   return (
     <section className='social-links'>
-      <img src={Slack} alt="" />
-      <img src={github} alt="" />
+      <img src={Slack} alt="slack" />
+      <img src={github} alt='github' />
     </section>
   );
 }
