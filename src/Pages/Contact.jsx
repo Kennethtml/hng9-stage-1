@@ -56,6 +56,8 @@ function Contact() {
             You agree to providing your data to {name} who may contact you.
           </label>
         </div>
+
+        <button className="btn"id='btn__submit'> Send message</button>
       </form>
     </main>
   );
