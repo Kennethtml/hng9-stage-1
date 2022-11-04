@@ -2,15 +2,15 @@
     --error-color:#F83F23;
 }.contact{
     margin-inline: auto;
-    padding-block: 100px 122px;
+    padding-block: 10rem 12.2rem;
     // border: 1px solid #000;
     width: 92%;
-max-width: 720px;
+max-width: 72rem;
 
 
 
 @media(max-width:600px){
-    padding-block:14px 2px;
+    padding-block:1.4rem 2px;
 
 }
 @media(max-width:400px){
@@ -20,21 +20,22 @@ max-width: 720px;
 h1{
     font-size: 3.6rem;
     font-weight: 600;
-    line-height: 44px;
-    margin-bottom: 20px;
+    line-height: 4.4rem;
+    margin-bottom: 2rem;
 
 }
 p{
     color: var(--text-color);
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 48px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 4.8rem;
 }
 .error{
     color: var(--error-color);
     line-height: 1;
+    font-weight: 500;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-top: 5px;
 }
 .submit-message{
@@ -63,16 +64,13 @@ form{
     .input:has(input[type='checkbox']){
         display: flex;
         align-items: flex-start;
-        // justify-content: flex-start;
-        // border: 1px solid #000;
-        
         gap: 12px;
         margin-bottom: 32px;
 
         label{
             flex: 1;
             margin-bottom: 0;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             color: var(--text-color);
            
@@ -88,27 +86,27 @@ form{
 
      input,textarea{
             width: 100%;
-            padding: 10px 14px;
+            padding: 1rem 1.4rem;
             border-radius: 8px;
             border: 1px solid var(--form-bd-color);
             
 
             &::placeholder{
                 font-family: 'Inter';
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
-                line-height: 24px;
+                line-height: 2.4rem;
                 color:#667085;
             }
         }
         textarea{
-            height: 132px;
+            height: 13.2rem;
         }
         
 
 .name-input{
     display: flex;
-    gap: 24px;
+    gap: 2.4rem;
      &>*{
         flex: 1;
         display: block;
@@ -116,7 +114,7 @@ form{
      }
      @media(max-width:600px){
         flex-direction: column;
-        gap: 24px;
+        gap: 2.4rem;
      }
 }
 }
@@ -124,12 +122,12 @@ form{
     outline: none;
     border: none;
     width: 100%;
-    padding: 12px 0;
+    padding: 1.2rem 0;
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: "Inter";
-    line-height: 24px;
+    line-height: 2.4rem;
     background: var(--btn-color);
     border-radius: 8px;
 }

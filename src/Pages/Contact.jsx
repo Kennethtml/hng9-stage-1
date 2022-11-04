@@ -1,81 +1,85 @@
 import { ErrorResponse } from "@remix-run/router";
 import React from "react";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import "./pages.scss";
 
 function Contact() {
+
+	//name variable
   const name = "Ehiomhen Kenneth";
 
 
-const formDefault = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  message: "",
-};
+  //default state for the form elements
+  const formDefault = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  };
 
-  const[form,setForm]=useState(formDefault)
-  const[formErrors,setFormErrors]=useState({})
+  //The differen states for this component
+  const [form, setForm] = useState(formDefault);
+  const [formErrors, setFormErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState("");
 
-  function onChangeHandler(e){
-   setForm((prev)=>{
-    return{...prev,[e.target.name]:e.target.value}
-   })
-  }
-//   console.log(form)
 
-  function validateForm(form){
-  
-    const errors={}
-    if(form.firstName===""){
-       errors.firstName="please enter your first name"
+//function for handling change in form inputs
+  function onChangeHandler(e) {
+    setForm((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  }
+
+
+//form validator function
+  function validateForm(form) {
+    const errors = {};
+    if (form.firstName === "") {
+      errors.firstName = "please enter your first name";
     }
-      if (form.lastName === "") {
-        errors.lastName = "please enter your last name";
-      }
-       if (form.email === "") {
-         errors.email="please Enter your email adress"
-       }
-        if (form.message === "") {
-           errors.message="please Enter a message "
-        }
+    if (form.lastName === "") {
+      errors.lastName = "please enter your last name";
+    }
+    if (form.email === "") {
+      errors.email = "please Enter your email adress";
+    }
+    if (form.message === "") {
+      errors.message = "please Enter a message ";
+    }
 
-        return errors
+    return errors;
   }
 
 
- function Submit(e){
-    setSubmitMessage("")
-    e.preventDefault()
-   
-    setFormErrors(validateForm(form))
-  
-   
+  //function for submitting form
+  function Submit(e) {
+    setSubmitMessage("");
+    e.preventDefault();
 
+    setFormErrors(validateForm(form));
   }
-  console.log("err",formErrors)
-
+ 
+  //fixes the routing error by returning the page to the top on each page transition
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-useEffect(()=>{
-     if(Object.keys(formErrors).length===0){
-        setForm(formDefault); 
-        setSubmitMessage("Response received ")
-           setTimeout(() => {
-             setSubmitMessage("");
-           }, 3000);
-     }
-},[formErrors])
 
-useEffect(()=>{setSubmitMessage("")},[])
+  //sets error message and clears error message 
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0) {
+      setForm(formDefault);
+      setSubmitMessage("Response received ");
+      setTimeout(() => {
+        setSubmitMessage("");
+      }, 3000);
+    }
+  }, [formErrors]);
+
   
-console.log(submitMessage);
-
-
-
+  useEffect(() => {
+    setSubmitMessage("");
+  }, []);
 
   return (
     <main className="contact">
@@ -142,9 +146,7 @@ console.log(submitMessage);
             value={form.message}
             onChange={(e) => onChangeHandler(e)}
           ></textarea>
-          {formErrors.message && (
-            <p className="error">{formErrors?.message}</p>
-          )}
+          {formErrors.message && <p className="error">{formErrors?.message}</p>}
         </div>
 
         <div className="input">
