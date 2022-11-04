@@ -41,10 +41,10 @@ function Contact() {
       errors.lastName = "please enter your last name";
     }
     if (form.email === "") {
-      errors.email = "please Enter your email adress";
+      errors.email = "please enter your email adress";
     }
     if (form.message === "") {
-      errors.message = "please Enter a message ";
+      errors.message = "please enter a message ";
     }
 
     return errors;
@@ -76,7 +76,7 @@ function Contact() {
     }
   }, [formErrors]);
 
-  
+
   useEffect(() => {
     setSubmitMessage("");
   }, []);
@@ -150,8 +150,8 @@ function Contact() {
         </div>
 
         <div className="input">
-          <input type="checkbox" />
-          <label htmlFor="">
+          <input type="checkbox" id="terms" />
+          <label htmlFor="terms">
             You agree to providing your data to {name} who may contact you.
           </label>
         </div>
