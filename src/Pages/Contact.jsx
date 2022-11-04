@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 import "./pages.scss";
 
 function Contact() {
-
-	//name variable
+  //name variable
   const name = "Ehiomhen Kenneth";
-
 
   //default state for the form elements
   const formDefault = {
@@ -21,17 +19,21 @@ function Contact() {
   const [form, setForm] = useState(formDefault);
   const [formErrors, setFormErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState("");
+  const [check, setCheck] = useState(true);
 
-
-//function for handling change in form inputs
+  //function for handling change in form inputs
   function onChangeHandler(e) {
     setForm((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
   }
 
+  //toggling checkbox state
+  function toggleCheckBox() {
+    setCheck(!check);
+  }
 
-//form validator function
+  //form validator function
   function validateForm(form) {
     const errors = {};
     if (form.firstName === "") {
@@ -50,7 +52,6 @@ function Contact() {
     return errors;
   }
 
-
   //function for submitting form
   function Submit(e) {
     setSubmitMessage("");
@@ -58,14 +59,13 @@ function Contact() {
 
     setFormErrors(validateForm(form));
   }
- 
+
   //fixes the routing error by returning the page to the top on each page transition
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-
-  //sets error message and clears error message 
+  //sets error message and clears error message
   useEffect(() => {
     if (Object.keys(formErrors).length === 0) {
       setForm(formDefault);
@@ -75,7 +75,6 @@ function Contact() {
       }, 3000);
     }
   }, [formErrors]);
-
 
   useEffect(() => {
     setSubmitMessage("");
@@ -93,6 +92,7 @@ function Contact() {
             <label htmlFor="first_name"> First name</label>
 
             <input
+              className={formErrors.firstName ? "error-input" : ""}
               type="text"
               id="first_name"
               placeholder="Enter your first name"
@@ -108,6 +108,7 @@ function Contact() {
           <div className="last-name">
             <label htmlFor="last_name">Last name</label>
             <input
+              className={formErrors.lastName ? "error-input" : ""}
               type="text"
               id="last_name"
               placeholder="Enter your last name"
@@ -125,6 +126,7 @@ function Contact() {
         <div className="input">
           <label htmlFor="email">Email</label>
           <input
+            className={formErrors.email ? "error-input" : ""}
             type="email"
             id="email"
             placeholder="yourname@email.com"
@@ -138,6 +140,7 @@ function Contact() {
         <div className="input">
           <label htmlFor="message">Message</label>
           <textarea
+            className={formErrors.message ? "error-input" : ""}
             id="message"
             cols="30"
             rows="10"
@@ -149,14 +152,24 @@ function Contact() {
           {formErrors.message && <p className="error">{formErrors?.message}</p>}
         </div>
 
-        <div className="input">
-          <input type="checkbox" id="terms" />
+        <div className="input input-checkbox">
+          <input
+            type="checkbox"
+            id="terms"
+            checked={check}
+            onChange={(e) => toggleCheckBox(e)}
+          />
           <label htmlFor="terms">
             You agree to providing your data to {name} who may contact you.
           </label>
         </div>
 
-        <button className="btn" id="btn__submit" onClick={Submit}>
+        <button
+          className="btn"
+          id="btn__submit"
+          onClick={Submit}
+          disabled={!check}
+        >
           Send message
         </button>
       </form>
