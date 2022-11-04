@@ -29,16 +29,16 @@ const formDefault = {
   
     const errors={}
     if(form.firstName===""){
-       errors.firstName="please Enter a first name"
+       errors.firstName="please enter your first name"
     }
       if (form.lastName === "") {
-        errors.lastName = "please Enter a first name";
+        errors.lastName = "please enter your last name";
       }
        if (form.email === "") {
-         errors.email="please Enter a first name"
+         errors.email="please Enter your email adress"
        }
         if (form.message === "") {
-           errors.message="please Enter a message name"
+           errors.message="please Enter a message "
         }
 
         return errors
